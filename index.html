@@ -1,0 +1,74 @@
+<!-- Inclure le script de configuration de la base de donnée -->
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <!-- Meta données(Mots clés, description, robots...) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chemin d'accès menant vers les fichiers scss -->
+    <link rel="stylesheet" href="assets/lib/tailwindcss/tailwind.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/card.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,400;0,600;1,100;1,400&family=Montserrat:wght@400;600;700&family=Work+Sans:ital,wght@1,400;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+
+    <!-- Titre -->
+    <title>Wave Shooter</title>
+</head>
+<style>
+    #fai div
+    {
+        background-color: #f1f1f1;
+        border-radius: 50px;
+        width: 95px;
+        height: 95px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 20px;
+    }
+    #orange a img
+    {
+        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+    }
+</style>
+<body>
+    <div class="pt-32">
+        <h1 class="font-bold text-black text-2xl text-center mb-8">
+            Bienvenue M/Mme dans le Serveur 000756
+        </h1>
+        <p class="text-1xl text-gray-700 text-center">Veuillez vous connectez au service avec votre Wave ou Orange.</p>
+        <div class="flex flex-wrap justify-center">
+            <div class="flex gap-12 items-center align-middle" id="fai">
+                <div class="text-center" id="wave">
+                    <a href="phone.html">
+                        <img src="assets/img/wave.png" alt="Wave" height="70" width="70">
+                    </a>
+                </div>
+                <div id="orange" onclick="alert('Orange est Indisponible pour le moment ! Veuillez essayer avec Wave.')">
+                    <a href="#">
+                        <img src="assets/img/orange.png" alt="Orange" height="50" width="50">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        $("#dropdown-phone-button").click(function () {
+            $("#dropdown-phone").css("display", "block");
+        });
+        $("#cancel").click(function () { 
+            $("#dropdown-phone").css("display", "none");
+        });
+    </script>
+</body>
+
+</html>

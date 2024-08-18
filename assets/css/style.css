@@ -1,0 +1,41 @@
+:root
+{
+    --blue-dark: #070732;
+    --color: #1212a3;
+    --family: Montserrat;
+    --radius: 50px;
+    --blue: #5a6de8;
+    --transition: all 0.5s ease-in 0s;
+}
+*
+{
+    box-sizing: border-box;
+    font-family: var(--family);
+}
+#country
+{
+    background-color: #fff;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+input
+{
+    z-index: 890;
+    outline: none;
+}
+
+#circle
+{
+    background-color: #3333d3;
+    border-radius: 50px;
+    height: 20px;
+    width: 20px;
+    padding: 10px;
+}
