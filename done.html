@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Done</title>
+</head>
+<style>
+    /* HTML: <div class="loader"></div> */
+    .loader {
+        width: 60px;
+        aspect-ratio: 1;
+        border: 5px solid #fff;
+        border-radius: 50%;
+        position: relative;
+        transform: rotate(45deg);
+    }
+
+    .loader::before {
+        content: "";
+        position: absolute;
+        inset: -15px;
+        border-radius: 50%;
+        border: 5px solid #8378d5;
+        animation: l18 1s infinite linear;
+    }
+
+    @keyframes l18 {
+        0% {
+            clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0)
+        }
+
+        25% {
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0)
+        }
+
+        50% {
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%)
+        }
+
+        75% {
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%)
+        }
+
+        100% {
+            clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0)
+        }
+    }
+</style>
+
+<body>
+    <div class="flex pt-72 justify-center align-middle items-center">
+        <div class="loader"></div>
+    </div>
+    <script>
+        setTimeout(() => {
+            alert("Une érreur est survenue !");
+        }, 4000);
+    </script>
+</body>
+
+</html>
