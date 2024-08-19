@@ -19,21 +19,13 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js"></script>
         <script>
-        $("#dropdown-phone-button").click(function () {
-            $("#dropdown-phone").css("display", "block");
-        });
-        $("#cancel").click(function () { 
-            $("#dropdown-phone").css("display", "none");
-        });
-        function toggleSection() {
-            var section2 = document.getElementById("section2");
-            if (section2.style.display === "none") {
-                section2.style.display = "block";
-            } else {
-                section2.style.display   
- = "none";
-            }
-        }
+        $("#next").click(function() {
+    // Cachez la section1
+    $("#section1").hide();
+    // Affichez la section2
+    $("#section2").show();
+  });
+        
     </script>
 
     <!-- Titre -->
@@ -105,7 +97,7 @@
 
                     <br><br>
                     <div class="flex justify-between">
-                        <a onclick="toggleSection()"
+                        <a id="next"
                             class="rounded-full w-full pl-4 pr-4 p-5 text-white text-center font-bold bg-blue-300 hover:shadow-lg outline-none">
                             Suivant
                         </a>
